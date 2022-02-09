@@ -15,9 +15,10 @@ class ffmpegTest(TestCase):
         self.assertEqual(cmd , b'PONG\n')
        
     def test_video_compression(self):
+        os.system("touch ./media/changed/240/test.mp4")
         with open('./media/changed/240/test.mp4' , "rb") as f:
             v = Video(video =  File(f))
             v.save()
-            
+
         self.assertTrue(v.video_360)
         self.assertTrue(v.video_240)
