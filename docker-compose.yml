@@ -11,7 +11,7 @@ services:
       - .:/app
     command: >
       sh -c "python3 manage.py migrate &&
-             python3 manage.py runserver 0.0.0.0:8005"
+             python3 manage.py runserver 0.0.0.0:8000"
 
   redis:
     image: redis:alpine
