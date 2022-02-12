@@ -14,9 +14,9 @@ RUN apk update \
     && apk add ffmpeg
  
 
-COPY ./requirements.txt /backend/
+COPY ./requirements.txt /app
 
 RUN pip install -r requirements.txt
 
-COPY ./entrypoint.sh /
+
 
